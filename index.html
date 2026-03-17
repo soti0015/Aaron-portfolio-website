@@ -3,45 +3,145 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SOTIRO PORTFOLIO</title>
+    <title>Sotiro Portfolio</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <nav class="navbar">
+      <a href="#top" class="logo">SOTIRO</a>
 
-    <nav>
-      <a href="#about">About Me</a>
-      <a href="#projects">Projects</a>
-      <a href="#goals">Career Goals</a>
-      <a href="#contact">Contact</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="resume.pdf" target="_blank">Resume</a></li>
+      </ul>
     </nav>
 
-    <section class="hero">
-      <h1>SOTIRO</h1>
-      <p>Explore sotiro</p>
+    <section id="top" class="hero fade-section">
+      <div class="hero-content">
+        <h1>SOTIRO</h1>
+        <p>Explore Sotiro</p>
+        <a href="#about" class="scroll-circle">↓</a>
+      </div>
     </section>
 
-  <section id="about">
-      <h1>About Me</h1>
-      <p>...</p>
+    <section id="about" class="content-section fade-section">
+      <div class="section-inner about-layout">
+        <div class="about-left">
+          <h2>About</h2>
+        </div>
+
+        <div class="about-right">
+          <div class="about-timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <span class="timeline-number">1</span>
+                <h3>Where I Started</h3>
+                <p>
+                  I’m Aaron Sotiropoulos, I am a Software Enginnering studdent
+                  at Flinders University. I was never the kid who was obsessed
+                  with computers, but I’ve always been interested in building
+                  things and learning how they work. In my mid highschool years
+                  I got into bulding PCs, and that’s when I started to get
+                  interested in hardware and software. Pass on through till end
+                  of highschool thinking what am I going to do with my life, I
+                  decided to give software engineering a go not kowing a single
+                  thing about it. Going into it I honestly had no idea what I
+                  was in for, as the first semester passed on I struggled a lot
+                  with it all. However going onto my second year everything was
+                  slowly starting to make sense. Now I’m in my third year and
+                  I’m loving it, I’ve found a passion for software engineering
+                  and I’m excited to see where it takes me.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <span class="timeline-number">02</span>
+                <h3>Outside of Work</h3>
+                <p>
+                  Outside of software, I enjoy working on personal ideas,
+                  creative projects, and taking care of my self. I spend my
+                  nights working at Coles and spend one day a week making gelato
+                  for my family buiness. I also gym often and if im not in the
+                  gym youll see me talking to chatGPT on how I can create my
+                  tech firm.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <span class="timeline-number">03</span>
+                <h3>Where I’m Going</h3>
+                <p>
+                  As I continue through university, I want to grow into a
+                  software engineer who can contribute to strong, real-world
+                  projects and continue developing both technically and
+                  creatively. I’m especially interested in going into a defence
+                  career working on military equipment and machines I am also
+                  intrested in building systems and digital experiences that are
+                  clean, functional, and genuinely useful.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <section id="projects" class="content-section fade-section">
+      <div class="section-inner">
+        <h2>Projects</h2>
 
+        <div class="projects-grid">
+          <div class="project-card">
+            <h3>Portfolio Website</h3>
+            <p>
+              A personal black-and-white portfolio website designed to showcase
+              my background, projects, goals, and contact details in a clean
+              one-page experience.
+            </p>
+            <a href="#" class="demo-btn">Try Live Demo</a>
+          </div>
 
-    <section id="projects">
-      <h1>Projects</h1>
-      <p>...</p>
+          <div class="project-card">
+            <h3>Project Two</h3>
+            <p>
+              Replace this with another project. Add a short summary of what it
+              does, who it is for, and what technologies you used to build it.
+            </p>
+            <a href="#" class="demo-btn">Try Live Demo</a>
+          </div>
+
+          <div class="project-card">
+            <h3>Project Three</h3>
+            <p>
+              Add another one of your personal or university projects here with
+              a short description and a demo or GitHub link.
+            </p>
+            <a href="#" class="demo-btn">Try Live Demo</a>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="goals">
-      <h1>Career Goals</h1>
-      <p>...</p>
-    </section>
+    <section id="contact" class="content-section">
+      <div class="section-inner narrow contact-section fade-section">
+        <h2>Let’s Connect</h2>
+        <p class="contact-intro">
+          If you’d like to connect, collaborate, or learn more about my work,
+          feel free to reach out.
+        </p>
 
-    <section id="contact">
-      <h1>Contact</h1>
-      <p>...</p>
+        <a href="contact.html" class="contact-page-btn">Contact Me</a>
+      </div>
     </section>
-
 
     <script src="script.js"></script>
   </body>
