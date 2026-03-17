@@ -601,14 +601,17 @@ body {
   }
 }
 @media (max-width: 980px) {
-  .profile-layout {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
+.profile-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: clamp(36px, 6vw, 90px);
+  align-items: start;
+}
 
-  .profile-left {
-    position: static;
-  }
+.profile-left {
+  position: sticky;
+  top: 120px;
+}
 
   .profile-left h1 {
     max-width: 100%;
@@ -930,4 +933,111 @@ body > *:not(#starfield) {
 
 .mock-browser-bar span:nth-child(3) {
   background: #28c840;
+}
+
+/* =========================
+   PROFILE MOBILE FIXES
+========================= */
+@media (max-width: 900px) {
+  .profile-page {
+    padding: 110px 0 50px;
+  }
+
+  .profile-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .profile-left {
+    position: static;
+  }
+
+  .profile-left h1 {
+    max-width: 100%;
+    font-size: clamp(28px, 8vw, 40px);
+    line-height: 1.2;
+  }
+
+  .profile-tabs {
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .profile-tab {
+    padding: 12px 16px;
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  .profile-panels {
+    min-height: auto;
+  }
+
+  .profile-item h3,
+  .skill-group h3 {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-page {
+    padding: 100px 0 40px;
+  }
+
+  .profile-layout {
+    gap: 22px;
+  }
+
+  .profile-kicker {
+    margin-bottom: 12px;
+  }
+
+  .profile-left h1 {
+    font-size: 28px;
+  }
+
+  .profile-tabs {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .profile-tab {
+    width: 100%;
+    text-align: center;
+    padding: 14px 16px;
+    border-radius: 14px;
+  }
+
+  .profile-panel p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .profile-item {
+    padding: 0 0 20px;
+    margin-bottom: 20px;
+  }
+
+  .profile-item span {
+    font-size: 11px;
+    margin-bottom: 8px;
+  }
+
+  .profile-item h3,
+  .skill-group h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+  }
+
+  .skill-pills {
+    gap: 10px;
+  }
+
+  .skill-pills span {
+    width: 100%;
+    text-align: center;
+    padding: 12px 14px;
+    font-size: 13px;
+  }
 }
