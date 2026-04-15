@@ -83,6 +83,58 @@ if (starfield) {
 
   window.addEventListener('resize', createStars);
 }
+// Back to top button
+const backToTopBtn = document.createElement('button');
+backToTopBtn.className = 'back-to-top';
+backToTopBtn.innerHTML = '↑';
+backToTopBtn.setAttribute('aria-label', 'Back to top');
+document.body.appendChild(backToTopBtn);
+
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 400) {
+    backToTopBtn.classList.add('visible');
+  } else {
+    backToTopBtn.classList.remove('visible');
+  }
+});
+
+// Active nav link
+const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+const projectFiles = ['kicco.html', 'ldc.html', 'nisteia.html'];
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  const href = link.getAttribute('href');
+  const linkFile = href.split('#')[0];
+
+  if (linkFile === currentFile && !href.includes('#')) {
+    link.classList.add('active-link');
+  } else if (projectFiles.includes(currentFile) && link.textContent.trim() === 'Work') {
+    link.classList.add('active-link');
+  }
+});
+
+// Hamburger menu
+const hamburger = document.querySelector('.hamburger');
+const mobileNav = document.querySelector('.nav-links');
+
+if (hamburger && mobileNav) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileNav.classList.toggle('open');
+  });
+
+  mobileNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileNav.classList.remove('open');
+    });
+  });
+}
+
 const contactForm = document.getElementById('contact-form');
 
 if (contactForm) {
